@@ -88,8 +88,11 @@ brew install ffmpeg
 cp .env.example .env
 # Edit .env and add your GEMINI_API_KEY
 
-# Build the app
-swift build
+# Build the app bundle (creates SuperVoiceAssistant.app)
+./build_app.sh
+
+# Or create a release binary manually
+swift build -c release
 
 # Run the main app
 swift run SuperVoiceAssistant
